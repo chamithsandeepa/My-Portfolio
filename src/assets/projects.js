@@ -3,7 +3,7 @@ import fetchMeImg from "../assets/FetchMe.png";
 import netflixImg from "../assets/netflix.png";
 import realImg from "../assets/real.png";
 import travelImg from "../assets/travel.png";
-import todoImg from "../assets/todo.png";
+import todoImg from "../assets/ToDo.png";
 
 export const projects = [
   {
