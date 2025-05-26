@@ -26,9 +26,9 @@ const Hero = () => {
             viewport={{ once: false, amount: 0.5 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            I create stellar web experiences with modern technologies.
-            Specializing in front-end development, I build interfaces that are
-            both beautiful and functional.
+            I craft polished web applications powered by modern tech stacks.
+            Specializing in front-end development, I focus on building UIs that
+            are sleek and efficient.
           </motion.p>
 
           <motion.div

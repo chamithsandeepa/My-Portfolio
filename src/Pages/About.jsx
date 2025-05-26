@@ -1,6 +1,6 @@
 import React from "react";
 import { m, motion } from "framer-motion";
-import { Zap, LayoutDashboard, Users, Download } from "lucide-react";
+import { Zap, LayoutDashboard, Smartphone, Download } from "lucide-react";
 import mycv from "../assets/CV.pdf";
 
 const About = () => {
@@ -57,14 +57,16 @@ const About = () => {
               Passionate Web Developer & Tech Creator
             </h3>
             <p className="text-gray-300 mb-4 text-center lg:text-left">
-              With over 5 years of experience in web development, I specialize
-              in creating responsive, accessible, and performant web
-              applications using modern technologies.
+              As an aspiring web developer, I focus on building responsive,
+              accessible, and high-performance web applications using modern
+              technologies. Through academic projects and self-driven learning,
+              I’m honing my skills to create seamless digital experiences.
             </p>
             <p className="text-gray-300 mb-6 text-center lg:text-left">
-              I'm passionate about staying relevant when it comes to complete
-              products. I'm constantly learning new technologies and techniques
-              to stay at the forefront of the ever-evolving web landscape.
+              I'm passionate about crafting complete, user-centered products and
+              staying current with industry trends. I’m always exploring new
+              tools and techniques to grow as a developer in today’s
+              fast-changing web ecosystem.
             </p>
             <div className="flex justify-center lg:justify-start space-x-4">
               <button
@@ -106,10 +108,10 @@ const About = () => {
                   bg: "bg-purple-500/20",
                 },
                 {
-                  icon: <Users className="w-6 h-6 text-green-500" />,
-                  title: "Project Management",
-                  desc: "Leading projects from conception to completion with agile methodologies.",
-                  bg: "bg-green-500/20",
+                  icon: <Smartphone className="w-6 h-6 text-blue-500" />,
+                  title: "Mobile App Development",
+                  desc: "Building intuitive and high-performance mobile apps for Android and iOS platforms.",
+                  bg: "bg-blue-500/20",
                 },
               ].map((item, index) => (
                 <motion.div
