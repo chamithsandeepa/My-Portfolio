@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
         <a href="#home" className="flex items-center space-x-2">
-          <span className="text-white font-bold text-xl">CS</span>
+          <span className="text-white font-bold text-xl">MY</span>
           <span className="text-purple-500 font-bold text-xl">Portfolio</span>
         </a>
 
