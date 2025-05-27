@@ -20,15 +20,29 @@ const Projects = () => {
       nextProject();
     }, 5000);
     return () => clearInterval(interval);
-  }, [current]);
+  }, []); // Removed current from dependency array
 
   const getPosition = (index) => {
-    const diff = index - current;
-    if (diff === 0) return "center";
-    if (diff === -1 || (current === 0 && index === projects.length - 1))
-      return "left";
-    if (diff === 1 || (current === projects.length - 1 && index === 0))
-      return "right";
+    const total = projects.length;
+
+    // Handle case when there are less than 3 projects
+    if (total < 3) {
+      if (index === current) return "center";
+      return "hidden";
+    }
+
+    // Current project is always center
+    if (index === current) return "center";
+
+    // Calculate left position (previous project)
+    const leftIndex = current === 0 ? total - 1 : current - 1;
+    if (index === leftIndex) return "left";
+
+    // Calculate right position (next project)
+    const rightIndex = current === total - 1 ? 0 : current + 1;
+    if (index === rightIndex) return "right";
+
+    // All other projects are hidden
     return "hidden";
   };
 
@@ -89,7 +103,7 @@ const Projects = () => {
         <div className="relative flex items-center justify-center">
           <button
             onClick={prevProject}
-            className="absolute left-0 z-20 p-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white"
+            className="absolute left-0 z-20 p-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white transition-colors duration-200"
             aria-label="Previous Project"
           >
             <ArrowLeft className="w-6 h-6" />
@@ -107,6 +121,7 @@ const Projects = () => {
                   animate={position}
                   whileHover={{
                     scale: position === "center" ? 1.05 : undefined,
+                    transition: { duration: 0.2 },
                   }}
                 >
                   <div className="relative h-56 overflow-hidden">
@@ -139,20 +154,29 @@ const Projects = () => {
                       {project.description}
                     </p>
                     <div className="flex space-x-4">
-                      <a
-                        href={project.demoLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-purple-400 hover:text-white flex items-center gap-1"
-                        aria-label={`View ${project.title} demo`}
-                      >
-                        Demo <ExternalLink size={16} />
-                      </a>
+                      {project.demoLink && project.demoLink !== "N/A" ? (
+                        <a
+                          href={project.demoLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-purple-400 hover:text-white flex items-center gap-1 transition-colors duration-200"
+                          aria-label={`View ${project.title} demo`}
+                        >
+                          Demo <ExternalLink size={16} />
+                        </a>
+                      ) : (
+                        <span
+                          className="text-gray-500 cursor-not-allowed flex items-center gap-1"
+                          title="Demo not available"
+                        >
+                          Demo Unavailable <ExternalLink size={16} />
+                        </span>
+                      )}
                       <a
                         href={project.codeLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-purple-400 hover:text-white flex items-center gap-1"
+                        className="text-purple-400 hover:text-white flex items-center gap-1 transition-colors duration-200"
                         aria-label={`View ${project.title} code`}
                       >
                         Code <ExternalLink size={16} />
@@ -166,7 +190,7 @@ const Projects = () => {
 
           <button
             onClick={nextProject}
-            className="absolute right-0 z-20 p-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white"
+            className="absolute right-0 z-20 p-3 rounded-full bg-purple-600 hover:bg-purple-700 text-white transition-colors duration-200"
             aria-label="Next Project"
           >
             <ArrowRight className="w-6 h-6" />

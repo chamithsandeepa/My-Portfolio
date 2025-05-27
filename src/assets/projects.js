@@ -22,7 +22,14 @@ export const projects = [
     description:
       "A modern pet adoption platform that connects potential pet parents with animals in need. Built with a scalable tech stack, it features user registration, pet listings, search functionality, and admin control with secure data handling.",
     image: fetchMeImg,
-    technologies: ["React", "TypeScript", "Tailwind CSS", "MongoDB", "AWS"],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "MongoDB",
+      "Spring Boot",
+      "AWS",
+    ],
     demoLink: "https://fetch-me-home-front-end.vercel.app/",
     codeLink: "https://github.com/chamithsandeepa/Fetch_Me_Home_FrontEnd.git",
   },
@@ -33,7 +40,7 @@ export const projects = [
       "A Netflix-inspired full-stack streaming platform built with React.js and Spring Boot, featuring user authentication, video playback, and dynamic content fetched from MongoDB.",
     image: netflixImg,
     technologies: ["React.js", "Spring Boot", "MongoDB"],
-    demoLink: "https://fetch-me-home-front-end.vercel.app/",
+    demoLink: "https://netflix-clone-frontend-hiup.vercel.app/",
     codeLink: "https://github.com/chamithsandeepa/Netflix_Clone_Frontend.git",
   },
   {
@@ -52,7 +59,7 @@ export const projects = [
     description:
       "A minimal and intuitive ToDo application that helps users manage daily tasks efficiently. Includes features like task creation, completion toggles, and real-time updates with a responsive mobile-friendly design.",
     image: todoImg,
-    technologies: ["ReactJS", "Tailwind CSS", "Vercel"],
+    technologies: ["ReactJS", "Tailwind CSS"],
     demoLink: "https://to-do-app-psi-eight.vercel.app/",
     codeLink: "https://github.com/chamithsandeepa/ToDo-App-.git",
   },
@@ -63,7 +70,7 @@ export const projects = [
       "A web-based travel booking system that allows users to search, book, and manage travel packages with ease.",
     image: travelImg,
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-    demoLink: "https://fitness-tracker-app.netlify.app",
-    codeLink: "https://github.com/chamithsandeepa/Fitness-Tracker",
+    demoLink: "N/A",
+    codeLink: "https://github.com/chamithsandeepa/Travel_Booking_System.git",
   },
 ];
