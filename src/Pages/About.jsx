@@ -54,19 +54,23 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <h3 className="text-2xl font-bold mb-4 text-center lg:text-left">
-              Passionate Web Developer & Tech Creator
+              Passionate Web Developer & UI Enthusiast
             </h3>
             <p className="text-gray-300 mb-4 text-center lg:text-left">
-              As an aspiring web developer, I focus on building responsive,
-              accessible, and high-performance web applications using modern
-              technologies. Through academic projects and self-driven learning,
-              I’m honing my skills to create seamless digital experiences.
+              As a dedicated web developer, I specialize in building responsive,
+              accessible, and visually engaging websites that deliver smooth
+              user experiences. My work revolves around creating clean,
+              efficient front-end solutions using modern tools like React,
+              Tailwind CSS, and JavaScript—ensuring each interface not only
+              functions well but also looks and feels intuitive.
             </p>
             <p className="text-gray-300 mb-6 text-center lg:text-left">
-              I'm passionate about crafting complete, user-centered products and
-              staying current with industry trends. I’m always exploring new
-              tools and techniques to grow as a developer in today’s
-              fast-changing web ecosystem.
+              Driven by a strong interest in design and user interaction, I
+              continuously explore new web technologies and frameworks to
+              sharpen my skills. Whether through personal projects or academic
+              work, I’m committed to crafting high-quality, user-friendly
+              websites that align with current industry standards and best
+              practices.
             </p>
             <div className="flex justify-center lg:justify-start space-x-4">
               <button
