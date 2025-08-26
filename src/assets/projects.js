@@ -4,6 +4,8 @@ import netflixImg from "../assets/netflix.png";
 import realImg from "../assets/real.png";
 import travelImg from "../assets/travel.png";
 import todoImg from "../assets/ToDo.png";
+import mindsketch from "../assets/mindsketch.png";
+import warewise from "../assets/warewise.png";
 
 export const projects = [
   {
@@ -72,5 +74,40 @@ export const projects = [
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     demoLink: "N/A",
     codeLink: "https://github.com/chamithsandeepa/Travel_Booking_System.git",
+  },
+  {
+    id: 1,
+    title: "E-Commerce Platform",
+    description:
+      "A full-stack clothing e-commerce platform with product browsing, cart management, secure JWT authentication, Stripe payment integration, and an admin dashboard for inventory, orders, and Cloudinary-powered product uploads.",
+    image: warewise,
+    technologies: [
+      "ReactJS",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Stripe",
+    ],
+    demoLink: "https://warewise-frontend.vercel.app/",
+    codeLink: "https://github.com/chamithsandeepa/warewise-frontend.git",
+  },
+  {
+    id: 2,
+    title: "AI Text-to-Image Platform",
+    description:
+      "A text-to-image generation platform powered by Stable Diffusion XL via Hugging Face API with secure JWT authentication, custom prompt handling, and a Stripe-based credit system for session and transaction management.",
+    image: mindsketch,
+    technologies: [
+      "ReactJS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Hugging Face API",
+      "Stripe API",
+      "JWT Authentication",
+    ],
+    demoLink: "https://mind-sketch-nine.vercel.app/",
+    codeLink: "https://github.com/chamithsandeepa/MindSketch.git",
   },
 ];

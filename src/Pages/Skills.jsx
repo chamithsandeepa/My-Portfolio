@@ -5,15 +5,16 @@ const Skills = () => {
   const [activeTab, setActiveTab] = useState("all");
 
   const skills = [
-    { name: "HTML/CSS", category: "frontend", proficiency: 90 },
-    { name: "JavaScript", category: "frontend", proficiency: 80 },
-    { name: "React", category: "frontend", proficiency: 80 },
-    { name: "Tailwind CSS", category: "frontend", proficiency: 70 },
-    { name: "Spring boot", category: "backend", proficiency: 80 },
-    { name: "MongoDB", category: "backend", proficiency: 70 },
+    { name: "HTML/CSS", category: "frontend", proficiency: 80 },
+    { name: "JavaScript", category: "frontend", proficiency: 70 },
+    { name: "React", category: "frontend", proficiency: 70 },
+    { name: "Tailwind CSS", category: "frontend", proficiency: 60 },
+    { name: "Spring boot", category: "backend", proficiency: 70 },
+    { name: "Node.js", category: "backend", proficiency: 60 },
+    { name: "MongoDB", category: "backend", proficiency: 80 },
     { name: "Git/GitHub", category: "tools", proficiency: 85 },
-    { name: "Figma", category: "tools", proficiency: 95 },
-    { name: "VS Code", category: "tools", proficiency: 95 },
+    { name: "Figma", category: "tools", proficiency: 80 },
+    { name: "VS Code", category: "tools", proficiency: 85 },
   ];
 
   const filteredSkills =
