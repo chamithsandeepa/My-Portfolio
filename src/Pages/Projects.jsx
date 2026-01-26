@@ -91,7 +91,7 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: false, amount: 0.2 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-3 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">
             Featured <span className="text-purple-500">Projects</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
@@ -115,7 +115,7 @@ const Projects = () => {
               return (
                 <motion.div
                   key={project.id}
-                  className="absolute w-96 bg-gray-900/90 rounded-xl overflow-hidden border border-gray-800 shadow-lg"
+                  className="absolute w-96 bg-gray-900/90 rounded-xl overflow-hidden border border-gray-800 shadow-lg hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300"
                   variants={variants}
                   initial="hidden"
                   animate={position}

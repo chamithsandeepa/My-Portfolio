@@ -9,6 +9,7 @@ const Skills = () => {
     { name: "JavaScript", category: "frontend", proficiency: 85 },
     { name: "TypeScript", category: "frontend", proficiency: 80 },
     { name: "Spring Boot", category: "backend", proficiency: 75 },
+    { name: "Next.js", category: "frontend", proficiency: 80 },
     { name: "Node.js", category: "backend", proficiency: 80 },
     { name: "React", category: "frontend", proficiency: 85 },
     { name: "Express.js", category: "backend", proficiency: 80 },
@@ -93,8 +94,9 @@ const Skills = () => {
           {filteredSkills.map((skill, index) => (
             <motion.div
               key={`${activeTab}-${skill.name}`}
-              className="bg-gray-900/30 backdrop-blur-sm p-6 rounded-xl border border-gray-800"
+              className="bg-gray-900/30 backdrop-blur-sm p-6 rounded-xl border border-gray-800 hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300"
               variants={itemVariants}
+              whileHover={{ scale: 1.05 }}
             >
               <div className="flex justify-between items-center mb-3">
                 <h3 className="text-lg font-medium">{skill.name}</h3>

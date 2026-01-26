@@ -121,7 +121,8 @@ const About = () => {
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-gray-800 flex items-start"
+                  className="bg-gray-900/50 backdrop-blur-sm p-6 rounded-xl border border-gray-800 flex items-start hover:border-blue-500 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
                 >
                   <div className={`mr-4 ${item.bg} p-3 rounded-lg`}>
                     {item.icon}
