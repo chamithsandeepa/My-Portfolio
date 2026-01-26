@@ -22,7 +22,7 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
-  const navItems = ["home", "about", "skills", "projects", "contact"];
+  const navItems = ["home", "about", "skills", "experience", "projects", "contact"];
 
   return (
     <nav

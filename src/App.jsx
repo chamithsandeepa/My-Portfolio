@@ -3,6 +3,7 @@ import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import About from "./Pages/About";
 import Skills from "./Pages/Skills";
+import Experience from "./Pages/Experience";
 import Projects from "./Pages/Projects";
 import Contact from "./Pages/Contact";
 import Footer from "./Components/Footer";
@@ -20,6 +21,9 @@ const App = () => {
         </section>
         <section id="skills">
           <Skills />
+        </section>
+        <section id="experience">
+          <Experience />
         </section>
         <section id="projects">
           <Projects />
