@@ -5,14 +5,22 @@ const Skills = () => {
   const [activeTab, setActiveTab] = useState("all");
 
   const skills = [
-    { name: "HTML/CSS", category: "frontend", proficiency: 80 },
-    { name: "JavaScript", category: "frontend", proficiency: 70 },
-    { name: "React", category: "frontend", proficiency: 70 },
-    { name: "Tailwind CSS", category: "frontend", proficiency: 60 },
-    { name: "Spring boot", category: "backend", proficiency: 70 },
-    { name: "Node.js", category: "backend", proficiency: 60 },
-    { name: "MongoDB", category: "backend", proficiency: 80 },
-    { name: "Git/GitHub", category: "tools", proficiency: 85 },
+    { name: "Java", category: "backend", proficiency: 80 },
+    { name: "JavaScript", category: "frontend", proficiency: 85 },
+    { name: "TypeScript", category: "frontend", proficiency: 80 },
+    { name: "Spring Boot", category: "backend", proficiency: 75 },
+    { name: "Node.js", category: "backend", proficiency: 80 },
+    { name: "React", category: "frontend", proficiency: 85 },
+    { name: "Express.js", category: "backend", proficiency: 80 },
+    { name: "HTML/CSS", category: "frontend", proficiency: 90 },
+    { name: "Tailwind CSS", category: "frontend", proficiency: 90 },
+    { name: "MySQL", category: "database", proficiency: 80 },
+    { name: "MongoDB", category: "database", proficiency: 80 },
+    { name: "PostgreSQL", category: "database", proficiency: 75 },
+    { name: "Docker", category: "tools", proficiency: 70 },
+    { name: "Git", category: "tools", proficiency: 85 },
+    { name: "GitHub", category: "tools", proficiency: 85 },
+    { name: "Postman", category: "tools", proficiency: 80 },
     { name: "Figma", category: "tools", proficiency: 80 },
     { name: "VS Code", category: "tools", proficiency: 85 },
   ];
@@ -42,7 +50,7 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 bg-black">
+    <section id="skills" className="py-20">
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -58,7 +66,7 @@ const Skills = () => {
 
         <div className="flex justify-center mb-12">
           <div className="inline-flex bg-gray-900/50 backdrop-blur-sm p-1 rounded-full">
-            {["all", "frontend", "backend", "tools"].map((tab) => (
+            {["all", "frontend", "backend", "database", "tools"].map((tab) => (
               <button
                 key={tab}
                 className={`py-2 px-6 rounded-full transition-colors duration-300 ${

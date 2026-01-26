@@ -31,7 +31,7 @@ const About = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-black">
+    <section id="about" className="py-20">
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-16"

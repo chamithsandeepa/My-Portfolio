@@ -82,7 +82,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-24 bg-black">
+    <section id="projects" className="py-24">
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-14"

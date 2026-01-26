@@ -9,7 +9,7 @@ import Footer from "./Components/Footer";
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-black text-white scroll-smooth">
+    <div className="min-h-screen text-white scroll-smooth">
       <Navbar />
       <div className="max-w-6xl mx-auto px-4">
         <section id="home">
