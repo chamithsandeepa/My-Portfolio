@@ -1,12 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-import meImage from "../assets/me1.png";
+import meImage from "../assets/me2.jpeg";
 import { ChevronDown } from "lucide-react"; // Lucide icon import
 
 const Hero = () => {
   return (
     <section
-      className="relative h-screen flex items-center justify-center bg-black overflow-hidden"
+      className="relative h-screen flex items-center justify-center overflow-hidden"
       id="home"
     >
       <div className="container mx-auto px-6 z-10">
@@ -24,7 +24,7 @@ const Hero = () => {
             </motion.h1>
 
             <motion.p
-              className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto lg:mx-0 mb-8"
+              className="text-gray-300 text-lg md:text-lg max-w-2xl mx-auto lg:mx-0 mb-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.5 }}
