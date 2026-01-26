@@ -1,12 +1,18 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Didot", "sans-serif";
+  --font-display: "Outfit", "sans-serif";
+}
+
 /* Reset default styles and ensure no horizontal overflow */
 html,
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal scroll */
-  background-color: #000000;
+  background: radial-gradient(circle at 50% 0%, #1a1a40, #000000 80%);
+  background-attachment: fixed;
   color: #ffffff;
   box-sizing: border-box;
 }
