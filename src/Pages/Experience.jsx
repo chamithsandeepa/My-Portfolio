@@ -7,16 +7,16 @@ const Experience = () => {
     {
       id: 1,
       role: "Intern Software Engineer",
-      company: "Cenzios (Pvt) Ltd",
-      location: "Gohagoda Road, Katugasthota, Kandy",
-      duration: "6 Months",
+      company: "Cenzios Pvt Ltd",
+      location: "Remote",
+      duration: "Sep 2025 – Present",
       description: [
-        "Contributed to the development of 'PufferFish', a comprehensive Learning Management System (LMS).",
-        "Played a key role in the 'SNP Holdings' project, ensuring robust feature implementation.",
-        "Designed and developed multiple completed landing pages, focusing on responsive UI and user experience.",
-        "Gained hands-on experience with modern web technologies and software engineering best practices within a professional team environment.",
+        "Resolved critical UI bugs and data fetching issues in production systems (LMS, SNP Holdings), significantly improving application stability.",
+        "Refactored React components using Redux Toolkit and Tailwind CSS to enhance mobile rendering and cross-browser compatibility.",
+        "Debugged complex API integrations between React frontend and backend microservices (Go/Gin, Node.js), reducing failure rates.",
+        "Designed and deployed production-ready landing pages using Next.js 15 and TypeScript, achieving high performance and SEO optimization.",
       ],
-      technologies: ["Spring Boot", "Angular", "Cypress", "Microservices", "React"],
+      technologies: ["React", "Next.js", "TypeScript", "Redux Toolkit", "React Query", "Node.js", "Go (Gin)", "Docker"],
     },
     
   ];
