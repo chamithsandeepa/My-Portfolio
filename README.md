@@ -178,28 +178,6 @@ The portfolio is automatically deployed on Vercel with continuous deployment fro
 
 ---
 
-## 🎯 Performance Optimization
-
-- Lazy loading for images
-- Code splitting with React lazy loading
-- Optimized bundle size
-- Minified CSS and JavaScript
-- Fast initial page load
-- Smooth 60fps animations
-
----
-
-## ♿ Accessibility Features
-
-- Semantic HTML elements
-- ARIA labels for screen readers
-- Keyboard navigation support
-- Sufficient color contrast
-- Alt text for images
-- Focus indicators
-
----
-
 ## 📱 Responsive Breakpoints
 ```css
 /* Mobile */
@@ -256,31 +234,11 @@ const newProject = {
 _Add screenshots of your portfolio here_
 
 ### Desktop View
-![Desktop](screenshots/desktop.png)
+![Desktop](screenshots/portweb.png)
 
 ### Mobile View
-![Mobile](screenshots/mobile.png)
+![Mobile](screenshots/portmob.png)
 
-### Animations
-![Animations](screenshots/animations.gif)
-
----
-
-## 🤝 Contributing
-
-This is a personal portfolio, but suggestions and improvements are welcome!
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
@@ -292,32 +250,6 @@ This project is open source and available under the [MIT License](LICENSE).
 - 💼 LinkedIn: [linkedin.com/in/chamithsandeepa](#)
 - 🐙 GitHub: [@chamithsandeepa](https://github.com/chamithsandeepa)
 - 🌐 Portfolio: [my-portfolio-nu-woad-65.vercel.app](https://my-portfolio-nu-woad-65.vercel.app)
-
----
-
-## 🙏 Acknowledgments
-
-- **React Team** for the amazing library
-- **Tailwind CSS** for the utility-first CSS framework
-- **Framer Motion** for smooth animations
-- **Vercel** for seamless deployment
-- Design inspiration from various portfolio websites
-
----
-
-## 📚 Resources
-
-- [React Documentation](https://react.dev/)
-- [Tailwind CSS Documentation](https://tailwindcss.com/)
-- [Framer Motion Documentation](https://www.framer.com/motion/)
-- [Vite Documentation](https://vitejs.dev/)
-
----
-
-## 🔗 Related Projects
-
-- [Netflix Clone](https://github.com/chamithsandeepa/Netflix_Clone_Frontend)
-- [Ware-Wise E-Commerce](https://github.com/chamithsandeepa/warewise)
 
 ---
 
