@@ -1,27 +1,64 @@
 import React from "react";
 import { motion } from "framer-motion";
-import meImage from "../assets/me2.jpeg";
+import meImage from "../assets/mynew1.png";
 import { ChevronDown } from "lucide-react"; // Lucide icon import
 
 const Hero = () => {
   return (
     <section
-      className="relative h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-12 lg:pt-0 lg:pb-0"
       id="home"
     >
       <div className="container mx-auto px-6 z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between">
           {/* Left side - Text content */}
           <div className="text-center lg:text-left flex-1">
-            <motion.h1
-              className="text-4xl md:text-6xl font-bold mb-6 text-white"
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.5 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              Hi, I'm <span className="text-purple-500">Chamith</span> Sandeepa
-            </motion.h1>
+              <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 text-white leading-tight">
+                Hi, I'm{" "}
+                <br className="sm:hidden" />
+                <span className="relative inline-block mt-2 sm:mt-0">
+                  <span className="text-purple-500">
+                    {"Chamith ".split("").map((char, index) => (
+                      <motion.span
+                        key={index}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.1, delay: 0.5 + index * 0.1 }}
+                      >
+                        {char}
+                      </motion.span>
+                    ))}
+                  </span>
+                  <span>
+                    {"Sandeepa".split("").map((char, index) => (
+                      <motion.span
+                        key={index}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.1, delay: 1.3 + index * 0.1 }}
+                      >
+                        {char}
+                      </motion.span>
+                    ))}
+                  </span>
+                  <motion.span
+                    className="inline-block w-1 h-10 md:h-14 bg-purple-500 ml-1 align-middle"
+                    animate={{ opacity: [1, 0] }}
+                    transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
+                  />
+                </span>
+              </h1>
+            </motion.div>
+
+            <h1 className="text-2xl md:text-3xl font-semibold text-purple-400 mb-4">
+              Software Engineer
+            </h1>
 
             <motion.p
               className="text-gray-300 text-lg md:text-lg max-w-2xl mx-auto lg:mx-0 mb-8"
@@ -52,88 +89,38 @@ const Hero = () => {
           </div>
 
           {/* Right side - Photo */}
-          <div className="flex justify-center lg:justify-end mt-8 lg:mt-0 lg:ml-8">
+          <div className="flex justify-center lg:justify-end mt-12 lg:mt-0 lg:ml-12">
             <motion.div
-              className="relative"
-              initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
-              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-              viewport={{ once: false, amount: 0.5 }}
-              transition={{
-                duration: 1,
-                delay: 0.6,
-                type: "spring",
-                stiffness: 100,
+              className="relative group"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ 
+                duration: 1.2,
+                ease: [0.22, 1, 0.36, 1]
               }}
-              whileHover={{ scale: 1.05, rotate: 2 }}
             >
-              {/* Glowing background effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full blur-xl opacity-30 animate-pulse"></div>
-
-              {/* Photo container */}
-              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-purple-500 shadow-2xl bg-black">
+              {/* Seamless Photo Container - Enhanced Left-side Blend */}
+              <div 
+                className="relative w-80 h-[28rem] md:w-[28rem] md:h-[34rem] lg:w-[32rem] lg:h-[40rem] transition-all duration-700"
+                style={{
+                   maskImage: 'linear-gradient(to bottom, transparent, black 15%, black 85%, transparent), linear-gradient(to right, transparent, black 30%, black 70%, transparent)',
+                   WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 15%, black 85%, transparent), linear-gradient(to right, transparent, black 30%, black 70%, transparent)',
+                   WebkitMaskComposite: 'source-in',
+                   maskComposite: 'intersect'
+                }}
+              >
                 <img
                   src={meImage}
                   alt="Chamith Sandeepa"
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover object-top grayscale-[0.1] contrast-[1.1] brightness-[1.1] transition-all duration-1000 group-hover:scale-105 group-hover:grayscale-0"
                 />
+                
+                {/* Layered Overlays for Background Matching */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a40]/40 via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a40]/30 via-transparent to-transparent" />
               </div>
 
-              {/* Floating decorative elements */}
-              <motion.div
-                className="absolute -top-4 -right-4 w-8 h-8 bg-purple-500 rounded-full"
-                animate={{
-                  y: [0, -10, 0],
-                  opacity: [0.7, 1, 0.7],
-                }}
-                transition={{
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              />
-
-              <motion.div
-                className="absolute -bottom-6 -left-6 w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-60"
-                animate={{
-                  y: [0, -15, 0],
-                  x: [0, 5, 0],
-                  scale: [1, 1.1, 1],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0.5,
-                }}
-              />
-
-              <motion.div
-                className="absolute top-1/4 -left-8 w-6 h-6 bg-pink-500 rounded-full opacity-40"
-                animate={{
-                  y: [0, -20, 0],
-                  opacity: [0.4, 0.8, 0.4],
-                }}
-                transition={{
-                  duration: 2.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1,
-                }}
-              />
-
-              <motion.div
-                className="absolute bottom-1/4 -right-8 w-4 h-4 bg-purple-300 rounded-full opacity-50"
-                animate={{
-                  y: [0, -12, 0],
-                  x: [0, -8, 0],
-                }}
-                transition={{
-                  duration: 2.2,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 1.5,
-                }}
-              />
             </motion.div>
           </div>
         </div>

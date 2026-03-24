@@ -7,18 +7,35 @@ const Experience = () => {
     {
       id: 1,
       role: "Intern Software Engineer",
-      company: "Cenzios Pvt Ltd",
-      location: "Remote",
-      duration: "Sep 2025 – Present",
+      company: "Cenzios (PVT) Ltd",
+      location: "Sri Lanka | Remote",
+      duration: "Sep 2025 – Mar 2026",
       description: [
-        "Resolved critical UI bugs and data fetching issues in production systems (LMS, SNP Holdings), significantly improving application stability.",
-        "Refactored React components using Redux Toolkit and Tailwind CSS to enhance mobile rendering and cross-browser compatibility.",
-        "Debugged complex API integrations between React frontend and backend microservices (Go/Gin, Node.js), reducing failure rates.",
-        "Designed and deployed production-ready landing pages using Next.js 15 and TypeScript, achieving high performance and SEO optimization.",
+        "Designed and built the Voyage Tourist Cab Booking System backend using NestJS — modular architecture, RESTful APIs, JWT authentication, and PostgreSQL integration.",
+        "Integrated Next.js frontend for the Voyage platform with dynamic routing, React Query-powered API calls, and responsive Tailwind UI components.",
+        "Implemented responsive frontend features and resolved critical UI rendering bugs for the SaaS Payroll platform (Dual Admin & User Portals) using React, TypeScript, and Tailwind CSS.",
+        "Refactored core features in the SNP Holdings system (React.js + Node.js/Express), eliminating 3 critical UI bugs reported in production and improving component render efficiency.",
+        "Built and deployed production-ready landing pages for 5 products (SNP, Cenzios Learning, CERT, Payroll, InterviewPro) using Next.js and TypeScript.",
+        "Contributed responsive UI fixes and Shadcn/ui component enhancements to Travora 2.0 tourism platform, ensuring consistent mobile-to-desktop breakpoint behavior.",
       ],
-      technologies: ["React", "Next.js", "TypeScript", "Redux Toolkit", "React Query", "Node.js", "Go (Gin)", "Docker"],
+      technologies: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Redux Toolkit",
+        "React Query",
+        "Tailwind CSS",
+        "Shadcn/ui",
+        "Node.js",
+        "Express.js",
+        "Nest.js",
+        "Go (Gin)",
+        "PostgreSQL",
+        "MongoDB",
+        "Docker",
+        "Git",
+      ],
     },
-    
   ];
 
   return (
@@ -36,7 +53,7 @@ const Experience = () => {
           </h2>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto relative">
+        <div className="max-w-5xl mx-auto relative">
            {/* Timeline Line */}
           <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-purple-500/50 to-transparent"></div>
 
@@ -56,7 +73,7 @@ const Experience = () => {
                 <div className="absolute left-[-8px] md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-purple-500 rounded-full border-[3px] border-black z-10 shadow-[0_0_10px_rgba(168,85,247,0.6)] group-hover:scale-125 transition-transform duration-300"></div>
 
                 {/* Content Card */}
-                <div className="w-full md:w-[calc(50%-32px)] ml-8 md:ml-0">
+                <div className="w-full md:w-[calc(50%-16px)] ml-8 md:ml-0">
                   <motion.div
                     whileHover={{ scale: 1.02 }}
                     className="bg-gray-900/40 backdrop-blur-xl p-8 rounded-2xl border border-gray-800/50 hover:border-purple-500/50 hover:shadow-[0_0_30px_-5px_rgba(168,85,247,0.15)] transition-all duration-300 relative overflow-hidden"
