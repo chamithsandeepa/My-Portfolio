@@ -21,8 +21,7 @@ const Hero = () => {
             >
               <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 text-white leading-tight">
                 Hi, I'm{" "}
-                <br className="sm:hidden" />
-                <span className="relative inline-block mt-2 sm:mt-0">
+                <span className="relative">
                   <span className="text-purple-500">
                     {"Chamith ".split("").map((char, index) => (
                       <motion.span
