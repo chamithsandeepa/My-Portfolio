@@ -1,6 +1,6 @@
 import React from "react";
-import { m, motion } from "framer-motion";
-import { Zap, LayoutDashboard, Smartphone, Download } from "lucide-react";
+import { motion } from "framer-motion";
+import { Server, Layers, Code2, Download } from "lucide-react";
 import mycv from "../assets/CV.pdf";
 
 const About = () => {
@@ -54,23 +54,21 @@ const About = () => {
             transition={{ duration: 0.8 }}
           >
             <h3 className="text-2xl font-bold mb-4 text-center lg:text-left">
-              Passionate Web Developer & UI Enthusiast
+              Associate Software Engineer & Full Stack Developer
             </h3>
             <p className="text-gray-300 mb-4 text-center lg:text-left">
-              As a dedicated web developer, I specialize in building responsive,
-              accessible, and visually engaging websites that deliver smooth
-              user experiences. My work revolves around creating clean,
-              efficient front-end solutions using modern tools like React,
-              Tailwind CSS, and JavaScript—ensuring each interface not only
-              functions well but also looks and feels intuitive.
+              I'm an Associate Software Engineer at Surecore, building enterprise
+              insurance solutions with Java Spring Boot and Angular. I design
+              scalable backend services, RESTful APIs, and responsive web portals
+              that power real-world business workflows — from policy management
+              to stakeholder-facing dashboards.
             </p>
             <p className="text-gray-300 mb-6 text-center lg:text-left">
-              Driven by a strong interest in design and user interaction, I
-              continuously explore new web technologies and frameworks to
-              sharpen my skills. Whether through personal projects or academic
-              work, I’m committed to crafting high-quality, user-friendly
-              websites that align with current industry standards and best
-              practices.
+              Beyond my current role, I bring strong experience across the modern
+              JavaScript ecosystem — React, Next.js, Node.js, and NestJS — for
+              both professional projects and personal builds. I care about clean
+              architecture, maintainable code, and delivering performant
+              applications that work reliably from database to UI.
             </p>
             <div className="flex justify-center lg:justify-start space-x-4">
               <button
@@ -100,21 +98,21 @@ const About = () => {
             <div className="grid grid-cols-1 gap-6">
               {[
                 {
-                  icon: <Zap className="w-6 h-6 text-blue-500" />,
-                  title: "Web Development",
-                  desc: "Creating responsive websites and web applications using modern frameworks.",
+                  icon: <Server className="w-6 h-6 text-blue-500" />,
+                  title: "Backend Development",
+                  desc: "Building robust APIs and services with Java Spring Boot, Node.js, NestJS, and Express.",
                   bg: "bg-blue-500/20",
                 },
                 {
-                  icon: <LayoutDashboard className="w-6 h-6 text-purple-500" />,
-                  title: "UI/UX Design",
-                  desc: "Designing intuitive user interfaces and seamless user experiences.",
+                  icon: <Layers className="w-6 h-6 text-purple-500" />,
+                  title: "Frontend Development",
+                  desc: "Crafting responsive UIs with Angular, React, Next.js, TypeScript, and Tailwind CSS.",
                   bg: "bg-purple-500/20",
                 },
                 {
-                  icon: <Smartphone className="w-6 h-6 text-blue-500" />,
-                  title: "Mobile App Development",
-                  desc: "Building intuitive and high-performance mobile apps for Android and iOS platforms.",
+                  icon: <Code2 className="w-6 h-6 text-blue-500" />,
+                  title: "Full Stack Solutions",
+                  desc: "Delivering end-to-end features — from database design and API integration to polished user interfaces.",
                   bg: "bg-blue-500/20",
                 },
               ].map((item, index) => (

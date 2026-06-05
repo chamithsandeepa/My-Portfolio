@@ -1,11 +1,38 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Briefcase, Calendar } from "lucide-react";
+import { Calendar } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
     {
       id: 1,
+      role: "Associate Software Engineer",
+      company: "Surecore (Pvt) Ltd",
+      companyUrl: "https://www.surecore.co/",
+      location: "Colombo, Sri Lanka",
+      duration: "Apr 2026 – Present",
+      isCurrent: true,
+      description: [
+        "Develop and maintain enterprise insurance platform modules using Java Spring Boot — building RESTful APIs, business logic layers, and database integrations for core insurance workflows.",
+        "Build responsive Angular web portals for sales staff, customers, service providers, and management across general, life, health, and marine insurance product suites.",
+        "Implement end-to-end features across the Surecore cloud-native platform, connecting Angular frontends with Spring Boot microservices for policy, claims, and workflow management.",
+        "Collaborate on workflow-oriented modules that automate manual insurance processes and optimize stakeholder-facing portals for faster task completion.",
+        "Contribute to system integrations, API enhancements, and production bug fixes within a large-scale, multi-product insurance application suite.",
+      ],
+      technologies: [
+        "Java",
+        "Spring Boot",
+        "Angular",
+        "TypeScript",
+        "REST APIs",
+        "MySQL",
+        "PostgreSQL",
+        "Git",
+        "Docker",
+      ],
+    },
+    {
+      id: 2,
       role: "Intern Software Engineer",
       company: "Cenzios (PVT) Ltd",
       location: "Sri Lanka | Remote",
@@ -54,7 +81,6 @@ const Experience = () => {
         </motion.div>
 
         <div className="max-w-5xl mx-auto relative">
-           {/* Timeline Line */}
           <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-purple-500/50 to-transparent"></div>
 
           <div className="space-y-16">
@@ -69,22 +95,41 @@ const Experience = () => {
                   index % 2 === 0 ? "md:flex-row-reverse" : ""
                 } items-center w-full group`}
               >
-                {/* Timeline Dot */}
                 <div className="absolute left-[-8px] md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-purple-500 rounded-full border-[3px] border-black z-10 shadow-[0_0_10px_rgba(168,85,247,0.6)] group-hover:scale-125 transition-transform duration-300"></div>
 
-                {/* Content Card */}
                 <div className="w-full md:w-[calc(50%-16px)] ml-8 md:ml-0">
                   <motion.div
                     whileHover={{ scale: 1.02 }}
                     className="bg-gray-900/40 backdrop-blur-xl p-8 rounded-2xl border border-gray-800/50 hover:border-purple-500/50 hover:shadow-[0_0_30px_-5px_rgba(168,85,247,0.15)] transition-all duration-300 relative overflow-hidden"
                   >
-                    {/* Decorative gradient blob */}
                     <div className="absolute -top-10 -right-10 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl group-hover:bg-purple-500/20 transition-colors duration-500"></div>
 
                     <div className="relative z-10">
                       <div className="flex flex-col mb-4">
-                         <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-purple-400 transition-colors">{exp.role}</h3>
-                         <h4 className="text-lg text-purple-200 font-medium">{exp.company}</h4>
+                        <div className="flex flex-wrap items-center gap-2 mb-1">
+                          <h3 className="text-2xl font-bold text-white group-hover:text-purple-400 transition-colors">
+                            {exp.role}
+                          </h3>
+                          {exp.isCurrent && (
+                            <span className="text-[10px] font-semibold uppercase tracking-widest px-2.5 py-1 rounded-full bg-green-500/10 text-green-400 border border-green-500/30">
+                              Current
+                            </span>
+                          )}
+                        </div>
+                        <h4 className="text-lg text-purple-200 font-medium">
+                          {exp.companyUrl ? (
+                            <a
+                              href={exp.companyUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="hover:text-purple-400 transition-colors"
+                            >
+                              {exp.company}
+                            </a>
+                          ) : (
+                            exp.company
+                          )}
+                        </h4>
                       </div>
 
                       <div className="flex flex-wrap gap-4 mb-6 text-sm text-gray-400">
@@ -109,16 +154,16 @@ const Experience = () => {
                         ))}
                       </ul>
 
-                      {/* Tech Stack Badges */}
                       <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-gray-800/50">
-                        {exp.technologies && exp.technologies.map((tech, i) => (
-                          <span 
-                            key={i} 
-                            className="text-xs font-medium px-3 py-1 rounded-full bg-purple-900/20 text-purple-300 border border-purple-800/30 hover:bg-purple-900/40 transition-colors"
-                          >
-                            {tech}
-                          </span>
-                        ))}
+                        {exp.technologies &&
+                          exp.technologies.map((tech, i) => (
+                            <span
+                              key={i}
+                              className="text-xs font-medium px-3 py-1 rounded-full bg-purple-900/20 text-purple-300 border border-purple-800/30 hover:bg-purple-900/40 transition-colors"
+                            >
+                              {tech}
+                            </span>
+                          ))}
                       </div>
                     </div>
                   </motion.div>

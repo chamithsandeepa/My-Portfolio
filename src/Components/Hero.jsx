@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import meImage from "../assets/mynew1.png";
-import { ChevronDown } from "lucide-react"; // Lucide icon import
+import meImage from "../assets/mynew1.webp";
+import { ChevronDown } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -11,7 +11,6 @@ const Hero = () => {
     >
       <div className="container mx-auto px-6 z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between">
-          {/* Left side - Text content */}
           <div className="text-center lg:text-left flex-1">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -55,9 +54,9 @@ const Hero = () => {
               </h1>
             </motion.div>
 
-            <h1 className="text-2xl md:text-3xl font-semibold text-purple-400 mb-4">
-              Software Engineer
-            </h1>
+            <h2 className="text-2xl md:text-3xl font-semibold text-purple-400 mb-4">
+              Associate Software Engineer
+            </h2>
 
             <motion.p
               className="text-gray-300 text-lg md:text-lg max-w-2xl mx-auto lg:mx-0 mb-8"
@@ -68,7 +67,7 @@ const Hero = () => {
             >
               I build dynamic, end-to-end web applications using modern full
               stack technologies. From crafting seamless user experiences on the
-              front end to architecting robust, scalable back-end systems, I’m
+              front end to architecting robust, scalable back-end systems, I'm
               passionate about delivering performant, clean, and maintainable
               solutions that make a real impact.
             </motion.p>
@@ -87,45 +86,47 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Right side - Photo */}
           <div className="flex justify-center lg:justify-end mt-12 lg:mt-0 lg:ml-12">
             <motion.div
               className="relative group"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ 
+              transition={{
                 duration: 1.2,
-                ease: [0.22, 1, 0.36, 1]
+                ease: [0.22, 1, 0.36, 1],
               }}
             >
-              {/* Seamless Photo Container - Enhanced Left-side Blend */}
-              <div 
-                className="relative w-80 h-[28rem] md:w-[28rem] md:h-[34rem] lg:w-[32rem] lg:h-[40rem] transition-all duration-700"
+              <div
+                className="relative w-80 h-[28rem] md:w-[28rem] md:h-[34rem] lg:w-[32rem] lg:h-[40rem] transition-all duration-700 bg-white/5"
                 style={{
-                   maskImage: 'linear-gradient(to bottom, transparent, black 15%, black 85%, transparent), linear-gradient(to right, transparent, black 30%, black 70%, transparent)',
-                   WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 15%, black 85%, transparent), linear-gradient(to right, transparent, black 30%, black 70%, transparent)',
-                   WebkitMaskComposite: 'source-in',
-                   maskComposite: 'intersect'
+                  maskImage:
+                    "linear-gradient(to bottom, transparent, black 15%, black 85%, transparent), linear-gradient(to right, transparent, black 30%, black 70%, transparent)",
+                  WebkitMaskImage:
+                    "linear-gradient(to bottom, transparent, black 15%, black 85%, transparent), linear-gradient(to right, transparent, black 30%, black 70%, transparent)",
+                  WebkitMaskComposite: "source-in",
+                  maskComposite: "intersect",
                 }}
               >
                 <img
                   src={meImage}
                   alt="Chamith Sandeepa"
+                  width={512}
+                  height={640}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="w-full h-full object-cover object-top grayscale-[0.1] contrast-[1.1] brightness-[1.1] transition-all duration-1000 group-hover:scale-105 group-hover:grayscale-0"
                 />
-                
-                {/* Layered Overlays for Background Matching */}
+
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a40]/40 via-transparent to-transparent opacity-60" />
                 <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a40]/30 via-transparent to-transparent" />
               </div>
-
             </motion.div>
           </div>
         </div>
       </div>
 
-      {/* Replaced SVG with Lucide ChevronDown */}
       <motion.div
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center"
         initial={{ opacity: 0 }}
